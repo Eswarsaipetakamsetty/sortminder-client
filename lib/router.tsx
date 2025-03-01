@@ -1,4 +1,4 @@
-export const host = "https://sortminder-backend-production.up.railway.app/"
+export const host = "https://sortminder-backend-production.up.railway.app"
 
 export const routes = {
     //authentication
