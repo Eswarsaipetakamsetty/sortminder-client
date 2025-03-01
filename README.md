@@ -5,6 +5,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+npm install
+
 npm run dev
 # or
 yarn dev
@@ -13,6 +15,23 @@ pnpm dev
 # or
 bun dev
 ```
+Routes Are:
+
+base route:
+`/home`
+
+auth routes:
+`auth/signup/`
+`auth/login/`
+
+profile routes:
+`users/profile`
+`users/editprofile`
+
+challenges:
+`challenge/solve`
+`challenge/startchallenge` 
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
