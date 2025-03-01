@@ -21,6 +21,6 @@ export const routes = {
 
     LEADERBOARD: `${host}/users/leaderboard`,
 
-    USER_PROFILE: `${host}/userprogress/score-history/`
+    USER_PROFILE: `${host}/userprogress/score-progress/`
 
 }
