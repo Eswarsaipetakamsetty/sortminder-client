@@ -1,4 +1,5 @@
 import ApiClient from "@/components/apiClient/ApiClient";
+import { routes } from "@/lib/router";
 import { useState, useEffect } from "react";
 
 interface ScoreEntry {
@@ -16,7 +17,7 @@ const useScoreHistory = () => {
         const fetchScoreHistory = async () => {
             try {
                 const data: ScoreEntry[] = await ApiClient.getWithToken(
-                    "http://localhost:8000/userprogress/score-progress/"
+                    `${routes.USER_PROFILE}`
                 );
 
                 console.log("API Response:", data);
