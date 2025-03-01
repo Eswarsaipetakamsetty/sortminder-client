@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "figtree-medium";
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+    font-family: "figtree-regular";
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-SemiBold.ttf");
+    font-family: "figtree-semibold";
+}
+
+.DiscussForumContainer {
+    font-family: "figtree-medium";
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Scrollable container for posts */
+.PostsContainer {
+    flex-grow: 1;
+    max-height: 500px; /* Adjust height as needed */
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Ensure the input bar does not move */
+.InputContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.input:focus {
+    border: 1px solid #036262;
+}
+
+.submit_button {
+    border-radius: 5px;
+    border: 1px solid rgb(3, 98, 98);
+    background-color: rgb(2, 76, 76);
+    color: white;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit_button:hover {
+    cursor: pointer;
+    background-color: rgba(2, 76, 76, 0.833);
+}

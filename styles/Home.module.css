@@ -1,0 +1,12 @@
+.homecenter {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 10%;
+    max-width: 100%; /* Prevents overflow */
+    width: 100%;
+    margin: 0 auto; /* Centers the content */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn’t cause overflow */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+

@@ -1,0 +1,18 @@
+.pageContainer {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.difficultySelector {
+    margin-bottom: 20px;
+}
+
+.select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}

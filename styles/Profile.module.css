@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Ensure Profile is left & ScoreGraph is right */
+    align-items: flex-start; /* Align both components to the top */
+    gap: 30px; /* Space between the two sections */
+    padding: 20px;
+
+}
+
+/* Profile component on the left */
+.profile {
+    flex: 1; /* Allow it to take available space */
+    max-width: 30%; /* Restrict it to avoid shrinking too much */
+}
+
+/* ScoreGraph component on the right */
+.scoregraph {
+    flex: 2; /* Allow it to take more space */
+    max-width: 70%; /* Ensure it takes more width */
+}

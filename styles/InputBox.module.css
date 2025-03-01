@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.label {
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(2, 76, 76);
+}
+
+.inputBox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+    margin: 10px;
+}
+
+.inputBox:focus {
+    outline: none;
+    border-color: #024636;
+    box-shadow: 0 0 5px rgba(2, 82, 82, 0.5);
+}
+
+

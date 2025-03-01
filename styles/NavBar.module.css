@@ -1,0 +1,124 @@
+/* Container */
+@font-face {
+    font-family: "figtree-medium";
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+    font-family: "figtree-regular";
+}
+@font-face {
+src: url("@/static/fonts/Figtree/Figtree-SemiBold.ttf");
+font-family: "figtree-semibold";
+}
+
+.container {
+    font-family: "figtree-semibold";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 76, 76);;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side (Logo) */
+.navbar_left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar_left a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Right Side (Menu) */
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Menu Items */
+
+
+.menu_item {
+    font-family: "figtree-regular";
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu_item:hover {
+    color: #ffcc00;
+}
+
+/* Dropdown Container */
+.dropdown_container {
+    position: relative;
+    background-color: rgb(2, 76, 76);;
+    
+}
+
+.dropdown_wrap {
+    background-color: rgb(2, 76, 76);
+    border: none;
+}
+
+/* Profile Button */
+.dropdoen_button {
+    border-radius: 20%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    object-fit: cover;
+    display: block;
+    margin: none;
+    padding: none;
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.dropdoen_button:hover {
+    border-color: #ffcc00;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dropdown Items */
+.dropdown_item {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown_item:hover {
+    background: #ffcc00;
+    color: white;
+}

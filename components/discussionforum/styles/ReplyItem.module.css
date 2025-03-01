@@ -1,0 +1,10 @@
+.ReplyItem{
+    margin-left: 3%;
+    color: black;
+    font-weight: 10px;
+}
+
+.like_btn{
+    background-color: none;
+    border: none;
+}

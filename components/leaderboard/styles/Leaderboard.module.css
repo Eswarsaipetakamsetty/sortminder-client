@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "figtree-medium";
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+    font-family: "figtree-regular";
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-SemiBold.ttf");
+    font-family: "figtree-semibold";
+}
+
+.leaderboardContainer {
+    margin-right: 30%;
+    font-family: "figtree-medium";
+}
+
+.title {
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.filterContainer select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.leaderboardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboardTable th, .leaderboardTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.leaderboardTable th {
+    background: #f4f4f4;
+}
+
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.paginationContainer button {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.paginationContainer button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

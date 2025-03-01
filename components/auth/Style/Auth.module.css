@@ -1,0 +1,79 @@
+.container{
+    margin: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.heading{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.card {
+    background-color: rgb(245, 253, 250);
+    justify-items: center;
+    padding: 15px;
+    border: 1px solid rgb(2, 76, 76);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(2, 82, 82, 0.5);
+    height: 30rem;
+}
+
+.Button{
+    margin: 20px;
+    height: 36px;
+    width: 15rem;
+    box-shadow: 0 0 5px rgba(2, 82, 82, 0.5);
+    font-size: 20px;
+    color: white;
+    background-color: rgb(2, 76, 76);
+    border-radius: 6px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    transition: 50ms ease-in-out;
+}
+
+.Button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(4, 154, 154, 0.5);
+    background-color: rgb(3, 98, 98);
+}
+
+.bottom {
+    color : rgb(2, 76, 76);
+}
+
+.link {
+    color: rgb(0, 129, 129);
+    text-decoration: none;
+}
+
+.passwordcontainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.passwordbutton{
+    margin-left: -40px;
+    border: none;
+    background: none;
+    align-self: left;
+    margin-top: 1.5rem;
+
+}
+
+.error {
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
+}

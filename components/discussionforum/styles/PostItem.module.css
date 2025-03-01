@@ -1,0 +1,50 @@
+.profilepic{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.card_top{
+    display: flex;
+    flex-direction: row;
+}
+
+.username{
+    margin-top: 5px;
+    color: blue;
+    margin-left: 2%;
+}
+
+.postContent{
+    font-size: 20px;
+}
+
+.replyButton {
+    border-radius: 5px;
+    background-color: rgb(2, 76, 76);
+    color: white;
+    border-color: rgba(2, 76, 76, 0.837);
+}
+
+.replyButton:hover{
+    background-color: rgba(2, 76, 76, 0.859);
+}
+
+.replyInput{
+    outline: none;
+    border: none;
+}
+
+.toggleRepliesButton {
+    margin-top: 5px;
+    border: none;
+    background-color: white;
+    margin-left: 0%;
+    color: rgba(0, 0, 0, 0.627);
+    margin-bottom: 5px;
+}
+
+.timeAgo{
+    font-size: 10px;
+    text-align: right;
+}
