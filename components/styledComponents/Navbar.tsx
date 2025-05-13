@@ -52,7 +52,7 @@ function NavBar() {
                 <Link href="/home" className={styles.menu_item}>Home</Link>
                 <Link href="/challenge/startchallenge" className={styles.menu_item}>Challenge</Link>
                 <Link href="/careers" className={styles.menu_item}>Careers</Link>
-                <Link href="/about" className={styles.menu_item}>About</Link>
+                <Link href="/aboutus" className={styles.menu_item}>About</Link>
 
                 {isLoggedIn ? (
                     <div className={styles.dropdown_container}>

@@ -1,4 +1,4 @@
-export const host = "https://sortminder-backend-production.up.railway.app"
+export const host = "http://127.0.0.1:8000/"
 
 export const routes = {
     //authentication

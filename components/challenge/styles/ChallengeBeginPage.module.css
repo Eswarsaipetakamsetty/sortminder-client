@@ -1,18 +1,43 @@
+@font-face {
+    font-family: "figtree-medium";
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-Regular.ttf");
+    font-family: "figtree-regular";
+}
+@font-face {
+    src: url("@/static/fonts/Figtree/Figtree-SemiBold.ttf");
+    font-family: "figtree-semibold";
+}
+
 .pageContainer {
     padding: 20px;
     max-width: 800px;
     margin: auto;
     text-align: center;
+    font-family: "figtree-medium";
 }
 
 .difficultySelector {
-    margin-bottom: 20px;
+    padding: 10vh;
 }
 
-.select {
+.difficultyButton {
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left: 10px;
+}
+
+.difficultyButton:hover {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #012d1d;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #000000;
+    color: white;
 }

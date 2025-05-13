@@ -4,6 +4,7 @@ import PostItem from "./PostItem";
 import Pagination from "./Pagination";
 import { useState } from "react";
 import styles from "@/components/discussionforum/styles/DiscussForum.module.css";
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 
 const DiscussForum: FC = () => {
     const { posts, loading, setPage, page, sendMessage } = useDiscussForm();
@@ -34,7 +35,7 @@ const DiscussForum: FC = () => {
 
             {/* Wrap posts in a scrollable container */}
             <div className={styles.PostsContainer}>
-                {loading ? <p>Loading...</p> : posts.map(post => <PostItem key={post.id} post={post} />)}
+                {loading ? < LoadingSpinner /> : posts.map(post => <PostItem key={post.id} post={post} />)}
             </div>
 
             <Pagination page={page} setPage={setPage} />

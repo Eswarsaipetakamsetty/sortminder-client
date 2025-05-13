@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import ApiClient from "@/components/apiClient/ApiClient";
 import { routes } from "@/lib/router";
-import styles from "@/components/challenge/styles/Challenge.module.css";
+import styles from "@/components/challenge/styles/ChallengeBeginPage.module.css";
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 
 const ChallengePage = () => {
     const router = useRouter();
@@ -55,7 +56,7 @@ const ChallengePage = () => {
             </div>
 
             {/* Show loading state */}
-            {loading && <p>Fetching challenge...</p>}
+            {loading && < LoadingSpinner/>}
         </div>
     );
 };

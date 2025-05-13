@@ -1,12 +1,13 @@
 import { useProfile } from "../hooks/UseProfile"
 import styles from "@/components/profile/styles/Profile.module.css"
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 import { useRouter } from "next/router";
 
 const Profile = () => {
     const { profile, loading, error } = useProfile()
     const router = useRouter();
 
-    if (loading) return <p>Loading profile...</p>;
+    if (loading) return < LoadingSpinner/>;
     if (error) return <p>Error: {error}</p>;
     if (!profile) return <p>Profile not found</p>;
 

@@ -17,10 +17,11 @@ export const useLeaderboard = () => {
     const fetchLeaderboard = async () => {
         try {
             setLoading(true);
-            const response = await ApiClient.getWithToken(`${routes.LEADERBOARD}/?page=${page}&ordering=-${ordering}`);
+            let response = await ApiClient.getWithToken(`${routes.LEADERBOARD}/?page=${page}&ordering=-${ordering}`);
+            console.log(response)
             setUsers(response.results);
             console.log(response)
-            setTotalPages(response.total_pages);
+            setTotalPages(response.count%10 == 0? Math.floor(response.count/10): Math.floor(response.count/10 +1));
         } catch (error) {
             console.error("Error fetching leaderboard:", error);
         } finally {

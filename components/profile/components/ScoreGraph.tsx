@@ -10,11 +10,12 @@ import {
 } from "recharts";
 import useScoreHistory from "@/components/profile/hooks/UseScoreHistory";
 import styles from "@/components/profile/styles/ScoreGraph.module.css";
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 
 const ScoreGraph: React.FC = () => {
     const { scoreData, loading, error } = useScoreHistory();
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return < LoadingSpinner/>;
     if (error) return <p className={styles.error}>{error}</p>;
 
     // Transform data for cumulative score progression

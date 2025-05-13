@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 import Cookies from "js-cookie"
 import { routes } from "@/lib/router"
+import { json } from "stream/consumers"
 
 
 export const useSignup = () => {
@@ -15,14 +16,13 @@ export const useSignup = () => {
         setLoading(true)
         setError(null)
         try {
-            const response = await ApiClient.postWithoutToken(routes.REGISTER, userData)
-            console.log(response)
-            console.log(response.status)
-            if(response.statusCode === 200) {
+            const {response} = await ApiClient.postWithoutToken(routes.REGISTER, userData)
+            
+            if(response.status === 200) {
                 router.push("/auth/login/")
             }
         } catch(err: any) {
-            if (err.statusCode === 400) {
+            if (err.status === 400) {
                 const errorMessage = Object.values(err.message).flat().join(" ")
                 setError(errorMessage)
             } else {
@@ -46,7 +46,7 @@ export const useLogin = () => {
         setLoading(true)
         setError(null)
 
-            const response: Data = await ApiClient.postWithoutToken(routes.LOGIN, userData)
+            const response = await ApiClient.postWithoutToken(routes.LOGIN, userData) //changed
             Cookies.set("access_token", response.access)
             Cookies.set("id", String(response.user_id))
             Cookies.set("username", response.username)

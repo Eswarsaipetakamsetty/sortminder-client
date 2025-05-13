@@ -1,10 +1,11 @@
 import { FC } from "react";
 import { useLeaderboard } from "../hooks/useLeaderboard";
 import styles from "@/components/leaderboard/styles/Leaderboard.module.css";
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 
 const Leaderboard: FC = () => {
     const { users, loading, page, setPage, totalPages, ordering, setOrdering } = useLeaderboard();
-
+    console.log(totalPages)
     return (
         <div className={styles.leaderboardContainer}>
             <h2 className={styles.title}>Leaderboard</h2>
@@ -20,7 +21,7 @@ const Leaderboard: FC = () => {
 
             {/* Leaderboard Table */}
             {loading ? (
-                <p>Loading leaderboard...</p>
+                < LoadingSpinner />
             ) : (
                 <table className={styles.leaderboardTable}>
                     <thead>

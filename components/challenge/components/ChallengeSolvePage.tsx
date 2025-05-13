@@ -16,7 +16,6 @@ const ChallengeSolve = () => {
 
     return (
         <div>
-            <h1>Solving: {challengeData.challenge.title}</h1>
             <ChallengeScreen 
                 session_id={challengeData.sessionId} 
                 challenge={challengeData.challenge} 

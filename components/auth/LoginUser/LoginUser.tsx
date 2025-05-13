@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import { useLogin } from "../Hooks/auth";
 import InputBox from "@/components/styledComponents/InputBox";
 import styles from "../Style/Auth.module.css"
+import LoadingSpinner from "@/components/styledComponents/LoadingSpinner";
 
 
 const Login = () => {
@@ -58,8 +59,9 @@ const Login = () => {
                     >
                         Login
                     </button>
+                    {loading && < LoadingSpinner/>}
                 </form>
-                <p className={styles.bottom}>Don't have an account?<a className={styles.link} href="/users/register/">Signup</a></p>
+                <p className={styles.bottom}>Don't have an account?<a className={styles.link} href="/auth/signup/">Signup</a></p>
                 {error && <p className={styles.error}>{error}</p>}
             </div>
         </div>

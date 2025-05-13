@@ -6,7 +6,6 @@ export default function StartChallengePage() {
     return (
         <>
             <NavBar />
-            <h1>Challenge starts soon...</h1>
             < ChallengePage />
         </>
     )

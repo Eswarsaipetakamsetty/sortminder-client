@@ -9,6 +9,10 @@ export type Challenge = {
     description: string;
     sample_input: string;
     sample_output: string;
+    input_format: string;
+    output_format: string;
+    constraints: string;
+    difficulty: string;
 };
 
 export type ChallengeScreenProps = {

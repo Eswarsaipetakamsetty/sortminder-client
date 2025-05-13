@@ -9,14 +9,11 @@ export const useDiscussForm = () => {
     const [loading, setLoading] = useState(true)
     const [page, setPage] = useState(1)
 
-    useEffect(() => {
-        fetchPosts()
-    },[page])
 
-    const fetchPosts = async () => {
+    const fetchPosts = async (pageNumber: Number) => {
         try {
             setLoading(true)
-            const response = await ApiClient.getWithToken(`${routes.DISCUSSION_FORUM}/messages/?page=${page}`)
+            let response = await ApiClient.getWithToken(`${routes.DISCUSSION_FORUM}/messages/?page=${page}`)
             setPosts(response.messages)
         } catch (error) {
             console.error(error)
@@ -25,9 +22,14 @@ export const useDiscussForm = () => {
         }
     }
 
+    useEffect(() => {
+        setPosts([])
+        fetchPosts(page)
+    },[page])
+
     const sendMessage = async (content: string) => {
         try {
-            const newPost = await ApiClient.postWithToken(`${routes.DISCUSSION_FORUM}/messages/`, {content})
+            let newPost = await ApiClient.postWithToken(`${routes.DISCUSSION_FORUM}/messages/`, {content})
             setPosts([newPost, ...posts])
         } catch (error) {
             console.error(error)
@@ -36,7 +38,7 @@ export const useDiscussForm = () => {
 
     const sendReply = async (message: number, content: string) => {
         try {
-            const newReply = await ApiClient.postWithToken(`${routes.DISCUSSION_FORUM}/messages/reply/`, {
+            let newReply = await ApiClient.postWithToken(`${routes.DISCUSSION_FORUM}/messages/reply/`, {
                 message, 
                 content
             })

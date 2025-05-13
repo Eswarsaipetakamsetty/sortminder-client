@@ -1,4 +1,5 @@
 import { routes } from "@/lib/router";
+import { data } from "autoprefixer";
 import Cookies from "js-cookie";
 
 class ApiClient {
@@ -25,7 +26,7 @@ class ApiClient {
                 message: errorData.error || "An unexpected error occurred",
             };
         }
-        return await response.json();
+        return response.json()
     }
 
     async requestForm(endpoint:string,options:RequestInit){
